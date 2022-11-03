@@ -1,8 +1,8 @@
 #!/usr/bin/python3
+# function that prints all intergers of a list in reverse order
 
-def print_reversed_list_interger(my_List=[]):
-    if my_list is not None:
-        for i in my_list((len(my_list) - 1), -1,-1):
-            print("{:d}".format(my_List[i]))
-        else:
-            return
+def print_reversed_list_integer(my_list=[]):
+    if my_list:
+        my_list.reverse()
+        for i in my_list:
+            print("{:d}".format(i))
