@@ -1,4 +1,4 @@
-#1/usr/bin/python3
+#!/usr/bin/python3
 """a Python script that displays the body of the response (decoded in utf-8)"""
 
 import urllib.request
