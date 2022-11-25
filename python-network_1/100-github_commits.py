@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""lists the 10 most recent commits on a given GitHub repository.
+"""
+    take two arguments; 'repository name' & 'owner name',
+    in order to solve HBTN GitHub challenge
 """
 import sys
 import requests
@@ -7,7 +9,7 @@ import requests
 
 if __name__ == "__main__":
     url = "https://api.github.com/repos/{}/{}/commits".format(
-        sys.argv[2], sys.argv[1]
+        sys.argv[2], sys.argv[1])
 
     r = requests.get(url)
     commits = r.json()
@@ -16,5 +18,5 @@ if __name__ == "__main__":
             print("{}: {}".format(
                 commits[i].get("sha"),
                 commits[i].get("commit").get("author").get("name")))
-     except IndexError:
+    except IndexError:
         pass
